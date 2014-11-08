@@ -88,7 +88,7 @@ public class MailSender {
         msg.setSender(new InternetAddress(from));
         msg.setRecipient(Message.RecipientType.TO, new InternetAddress(from));
         final List<InternetAddress> nextAddressList = new ArrayList<>();
-        final int count = Math.min(100, this.addressList.size());
+        final int count = Math.min(90, this.addressList.size());
         for (int i = 0; i < count; i++) {
             nextAddressList.add(new InternetAddress(this.addressList.poll()));
         }
